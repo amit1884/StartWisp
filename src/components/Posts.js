@@ -1,5 +1,5 @@
 import React from 'react'
-import avatar from '../assets/djalok.jpg'
+import avatar from '../assets/avatar.png'
 function Posts({Posts}) {
     console.log(Posts)
     return (

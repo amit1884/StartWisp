@@ -8,10 +8,7 @@ function Notepad() {
         title:'Title',
         text:'Title Lorem ipsum dolor sit am...'
     },
-    {
-        title:'Title',
-        text:'Title Lorem ipsum dolor sit am...'
-    }])
+   ])
     const handleOpen=()=>{
         setOpen(true)
     }

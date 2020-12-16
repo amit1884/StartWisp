@@ -1,7 +1,7 @@
 import React ,{useState}from 'react'
 import Posts from '../components/Posts'
 import Sidebar from '../components/Sidebar'
-import avatar from '../assets/djalok.jpg'
+import avatar from '../assets/avatar.png'
 function Blog() {
     const [Text,setText]=useState('')
     const [PostData,setPostData]=useState([
