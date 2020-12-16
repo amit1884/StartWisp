@@ -18,13 +18,16 @@
     height:100%;
 }
 .sidebar_list_items{
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 700;
+    overflow: hidden;
     color:#fff;
+    /* padding:20px */
     
 }
 .sidebar_list_items p{
-    padding:7px 9px;
+    overflow: hidden;
+    padding:10px 9px;
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -63,6 +66,7 @@
     border:none;
     outline:none;
     margin:10px 30px;
+    
     cursor: 6;
 }
 #icon_btn,#share_btn{
@@ -78,6 +82,7 @@
     outline:none;
     border:none;
     cursor: pointer;
+    font-size: 17px;
 }
 #share_btn{
     width:130px;
@@ -340,4 +345,19 @@
     width:100%;
     height:280px;
     overflow: hidden;
+}
+.notepad_form_container{
+    position:fixed;
+    top:0;
+    right:0;
+    width:100%;
+    z-index:9999;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+.notepad_form{
+    width:500px;
 }

@@ -52,8 +52,8 @@ function Blog() {
                         value={Text}
                         />
                         <button id="cancel_btn">Cancel</button>
-                        <button id="share_btn"><span id="txt">Share</span><span id="icn">V</span></button>
-                        <button id="icon_btn" type="submit">i</button>
+                        <button id="share_btn"  type="submit"><span id="txt">Share</span><span id="icn"><i className="fa fa-chevron-down"></i></span></button>
+                        <button id="icon_btn" type="submit" style={{textAlign:'center'}}><i className="fa fa-paperclip"></i></button>
                     </form>
                </div>
                <Posts Posts={PostData}/>

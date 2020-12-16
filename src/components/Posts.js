@@ -26,8 +26,8 @@ function Posts({Posts}) {
                                     <img src ={avatar} alt="profile"/>
                                     </div>
                                     <form>
-                                        <input className="comment_input" type="text" placeholder="Write a comment ..."/>
-                                        <button id ="send_btn">send</button>
+                                        <input className="comment_input" type="text" placeholder="Write a comment ..."/>&nbsp;
+                                        <button id ="send_btn"><i class="fa fa-send" style={{fontSize:'25px',color:'#733D47'}}></i></button>
                                     </form>
                                 </div>
                                 :null
