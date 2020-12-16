@@ -2,12 +2,12 @@ import React from 'react'
 
 function Notifications() {
     const notification=[
-        {id:1,user:'Admin',text:'Your faculty uploaded the syllabus',bgcolor:'pink'},
-        {id:2,user:'Student',text:'Your faculty uploaded the syllabus',bgcolor:'lime'},
-        {id:3,user:'Teacher',text:'Your faculty uploaded the syllabus',bgcolor:'purple'},
-        {id:4,user:'Admin',text:'Your faculty uploaded the syllabus',bgcolor:'yellow'},
-        {id:5,user:'Admin',text:'Your faculty uploaded the syllabus',bgcolor:'orange'},
-        {id:6,user:'Admin',text:'Your faculty uploaded the syllabus',bgcolor:'blueviolet'},
+        {id:1,user:'Admin',text:'Your faculty uploaded the syllabus',bgcolor:'#FFD9D9'},
+        {id:2,user:'Student',text:'Your faculty uploaded the syllabus',bgcolor:'#D9FFE1'},
+        {id:3,user:'Teacher',text:'Your faculty uploaded the syllabus',bgcolor:'#BA99FF'},
+        {id:4,user:'Admin',text:'Your faculty uploaded the syllabus',bgcolor:'#F5E764'},
+        {id:5,user:'Admin',text:'Your faculty uploaded the syllabus',bgcolor:' #F5E764'},
+        {id:6,user:'Admin',text:'Your faculty uploaded the syllabus',bgcolor:' #F5E764'},
     ];
     return (
         <div className="notification_content">
