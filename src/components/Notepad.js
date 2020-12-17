@@ -1,28 +1,29 @@
 import React ,{useState}from 'react'
-
+import Editor from './Editor'
 function Notepad() {
-    const [Title,setTitle]=useState('')
-    const [Body,setBody]=useState('')
+    // const [Title,setTitle]=useState('')
+    // const [Body,setBody]=useState('')
     const[Open, setOpen]=useState(false)
     const [Data,setData]=useState([{
-        title:'Title',
-        text:'Title Lorem ipsum dolor sit am...'
+        id:1,
+        text:'<p><b>Title</b> Lorem ipsum dolor sit am...</p>'
     },
    ])
+
+   const puretext = text => {
+    return { __html: text };
+  };
     const handleOpen=()=>{
         setOpen(true)
     }
     const handleClose=()=>{
         setOpen(false)
     }
-    const SubmitHandler=(e)=>{
-        e.preventDefault()
-      setData([...Data,{
-          title:Title,
-          text:Body
-      }])
-        setOpen(false)
-    }
+   function SubmitHandler(data){
+       console.log(data)
+       setData([...Data,{id:Data.length,text:data}])
+       setOpen(false)
+   }
     
     return (
         <div className="notepad_box">
@@ -31,7 +32,11 @@ function Notepad() {
                 {
                     Data.map(items=>{
                         return(
-                            <p key={items.id} style={{fontSize:'13px',padding:'5px'}}><b>{items.title}</b>&nbsp;{items.text}</p>
+                            <p 
+                             key={items.id}
+                             style={{fontSize:'13px',padding:'5px'}} 
+                             dangerouslySetInnerHTML={puretext(items.text)}
+                             />
                         )
                     })
                 }
@@ -40,48 +45,7 @@ function Notepad() {
                 {
                     Open?
                     <div className="notepad_form_container">
-                    <form className="notepad_form" onSubmit={SubmitHandler}>
-                        <input 
-                        className="input_field"
-                        style={{width:'94%',height:'40px'}}
-                        onChange={(e)=>setTitle(e.target.value)}
-                        value={Title}
-                        type="text"placeholder="Title"/>
-                        <input 
-                        className="input_field"
-                        style={{width:'94%',height:'50px'}}
-                        onChange={(e)=>setBody(e.target.value)}
-                        value={Body}
-                        type="text"placeholder="Body"/>
-                        <button 
-                            style={{
-                                border:'none',
-                                background:'#FFC480',
-                                color:'#FF6C40',
-                                outline:'none',
-                                textAlign:'center',
-                                padding:'10px',
-                                marginLeft:'20px',
-                                borderRadius:'10px',
-                                cursor:'pointer'
-                            }}
-                                type="submit"
-                        >Save</button>&nbsp;&nbsp;&nbsp;
-                         <button 
-                            style={{
-                                border:'none',
-                                background:'#FF6C40',
-                                color:'#FFC480',
-                                outline:'none',
-                                textAlign:'center',
-                                padding:'10px',
-                                marginright:'90%',
-                                borderRadius:'10px',
-                                cursor:'pointer',
-                                float:'right'}}
-                        type="submit"
-                        onClick={handleClose}>Cancel</button>
-                    </form>
+                    <Editor submitHandler={SubmitHandler} close={handleClose}/>
                     </div>:null
                 }
         </div>

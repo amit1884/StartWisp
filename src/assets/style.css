@@ -1,7 +1,12 @@
+@font-face {
+    font-family: sfpro;
+    src: url(sfpro.ttf);
+  }
 *{
     padding:0;
     margin:0;
     overflow-x: hidden;
+    font-family: 'sfpro';
 }
 .main_wrapper{
     display: flex;
@@ -352,7 +357,7 @@
     right:0;
     width:100%;
     z-index:9999;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.6);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -360,4 +365,8 @@
 }
 .notepad_form{
     width:500px;
+    
+}
+.ck-editor__editable{
+    min-height:200px;
 }
